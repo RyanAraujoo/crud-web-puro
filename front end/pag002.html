@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Offside&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdn.es.gov.br/fonts/font-awesome/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <title>PromiShop</title>
+  </head>
+  <body onload="_listar()">
+       <header>
+        <div class="ulNav" id="nav-container">
+            <nav class="navbar navbar-expand-lg fixed-top">
+                <a href="#" class="navbar-brand">
+                    <img id="logo" src="img/logo.png" alt="Promi Shop">
+                </a>
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                      <a class="nav-link" href="pag002.html">CLIENTE</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="pag003.html">ESTOQUE</a>
+                    </li>
+                    
+                  </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+      <!--- topo -- barra de pesquisa -->
+      <div class="d-flex justify-content-end align-items-center">
+          <input type="text" name="pesquisaProduto" id="pesquisaProduto" placeholder="digite o nome do cliente">
+          <button type="button" id="btnPesquisa" onclick="_buscar()">
+            <img class="lupa-pesquisar-class" src="./img/lupa.png" alt="lupa-pesquisar-produto">
+          </button>
+      </div>
+  
+      <!-- barra de pesquisa renderizada após o clique em pesquisaProduto -->
+  
+      <div class="render-pesquisa">
+        <ul id="res-pesquisa">
+        </ul>
+      </div>
+      <!--- meio -- bloco onde está os detalhes da pagina ( produto - cliente - funcionario ) -->
+  
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col" id="id_barra">ID</th>
+            <th scope="col" id="produto_barra">CLIENTE</th>
+            <th scope="col" id="quant_barra">TELEFONE</th>
+            <th scope="col" id="valor_barra">STATUS</th>
+          </tr>
+          <tr id="linhaDeBarras">
+            <th scope="row">
+              <div id="linhaBarraID">
+                <input type="text" name="id" id="id" disabled >
+              </th>
+  
+              </div> 
+            <td>
+              <div id="linhaBarraProd">
+  
+              <input type="text" name="cliente" id="cliente" required></td>
+  
+              </div>
+  
+            <td>
+              <div id="linhaBarraQuant">
+  
+            <input type="number" name="telefone" id="telefone" required></td>
+  
+              </div>
+  
+            <td>
+  
+              <div id="linhaBarraValor">
+  
+            <input type="text" name="status" id="status" required></td>
+  
+            </div>
+          </tr>
+        </thead>
+        <tbody id="dataTable">
+         <!-- 
+          <tr>
+            <th scope="row" id="row_01">01</th>
+            <td>Ryan</td>
+            <td>(77)99999-9999</td>
+            <td>ATIVO</td>
+          </tr>
+         --> 
+        </tbody>
+      </table>
+      <div class="d-flex justify-content-end">
+        <button type="button" id='btn4' class="btn btn-danger" onclick="CancelarEnvioDeDadosAoServidor('adicionar')">CANCELAR</button>
+        <button type="button" id="btn5" class="btn btn-success" onclick="_editar()">SALVAR</button>
+      </div>
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn btn-warning" id="btn1" onclick="ComecarEditarDataEscolhida()">EDITAR</button>
+        <button type="button" class="btn btn-danger" id="btn2" onclick="ChamarTelaRemocao()">REMOVER</button>
+        <button type="button" class="btn btn-success" id="btn3" onclick="_salvar()">ADICIONAR</button>
+      </div>
+    </div>
+  
+    <!-- ao clicar no botão deletar , renderiza div -- deletarDados() -->
+    <div class="deletarTelaDados">
+      <h3>Remover Dados?</h3>
+      <hr/>
+      <div class="d-flex justify-content-center">
+        <button type="button" Class= "btn btn-success" onclick="_apagar()">SIM</button></div>
+        <div class="d-flex justify-content-center">
+        <button type="button" Class= "btn btn-danger" onclick="CancelarEnvioDeDadosAoServidor('remover')">NAO</button></div>
+        </button>
+      </div>
+    </div>
+    </div>
+    
+    <script src="script/script_of_pag002.js"></script>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
+

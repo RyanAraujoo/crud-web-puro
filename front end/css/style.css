@@ -1,0 +1,293 @@
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Offside',cursive; 
+}
+
+ /*BARRA DE NAVEGAÇÃO*/
+
+.container {
+  margin-top: 140px;
+}
+
+
+ul {
+  display: block;
+  margin-left: auto;
+}
+
+.ulNav ul::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 100px;
+  display: block;
+  height: 1.5px;
+  width: 100%;
+  background-color: white;
+}
+
+.ulNav ul::before{
+  content: '';
+  position: absolute;
+  right: 0;
+  left: 20px;
+  top: 110px;
+  display: block;
+  height: 1.5px;
+  width: 100%;
+  background-color: white;
+
+}
+
+.nav-link {
+  text-decoration: none;
+  padding:12px 8px;
+  width: 100px;
+  color: rgb(223, 252, 234);
+  border: 2px solid rgb(255, 255, 255);
+  background: none;
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+  font-family: 'Offside',cursive; 
+
+}
+
+.nav-link:hover{
+
+  transition: 1s;
+  color: rgb(61, 88, 67);
+  background: rgb(255, 255, 255);
+
+}
+/* ------------------------- */
+body {
+  background-color: #4c604c;
+  /* width: 1100px; a tabela não é responsiva*/ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* index */
+.logo-1{
+  color: white;
+  font-size: 70px;
+  padding: 10px 0px;
+  width: 600px;
+  height: 580px;
+}
+
+.container-1 {
+  background-color: #5b7e4b;
+  border-radius: 10px;
+  padding: 70px 0px;
+  width: 350px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 3px 0 #ffffff;
+}
+
+
+form {
+  position: absolute;
+  margin-top:30px;
+  width: 300px;
+  height: 400px;
+}
+
+.buttonsForm {
+  margin-top: 10px;
+  position: relative;
+
+}
+
+  .buttonsForm button {
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      position: relative;
+  
+  }
+
+.btnColor {
+  position: absolute;
+  width: 224px;
+  height: 100%;
+  
+}
+
+.form-inputs-login input {
+  border: none;
+  background-color: 
+  #9cc5a0;
+  margin-top: 40px;
+  padding: 8px 0 8px 35px;
+  outline: none;
+  width: 100%;
+}
+
+button[type="submit"] {
+  background: #299019;
+  color: white;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 8px 0px 8px 2px;
+  font-size: 15px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+#btnLogin{
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+}
+/* --------------- */ 
+tr ,th ,td {
+  color: #ffffff;
+}
+
+table {
+  
+    border: 1px solid black;
+    text-align: center;
+    background-color: #85a384;
+    border: rgb(213, 218, 214) solid;
+    border-width: 10px;
+}
+/*Adicionei no código html o id de cada uma das barras e modifiquei abaixo*/
+#id_barra{
+    border-right: rgb(14, 11, 11) solid;
+    border-width: 1px;
+}
+#produto_barra{
+    border-right: rgb(14, 11, 11) solid;
+    border-width: 1px;
+}
+#valor_barra{
+    border-right: rgb(14, 11, 11) solid;
+    border-width: 1px;
+}
+#quant_barra{
+    border-right: rgb(14, 11, 11) solid;
+    border-width: 1px;
+}
+/*Barras de click*/
+#id{
+    border: rgb(74, 109, 97) solid;
+    border-width: 2px;
+}
+#produto{
+    border: rgb(14, 11, 11) solid;
+    border-width: 2px;
+}
+#quantidade{
+    border: rgb(14, 11, 11) solid;
+    border-width: 2px;
+}
+#valor{
+    border: rgb(14, 11, 11) solid;
+    border-width: 2px;
+}
+
+tr {
+    cursor: pointer;
+    transition: background .4s; 
+}
+
+tbody>tr:hover:nth-last-child(n) {
+    background-color: aquamarine;
+}
+
+.d-flex>button {
+    width: 200px;
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+#btn4,
+#btn5 {
+    display: none;
+}
+#pesquisaProduto{
+    border: #000;
+    border-width: 5px;
+    background-color: rgb(202, 207, 211);
+    border: rgb(138, 138, 138) solid;
+}
+.lupa-pesquisar-class {
+    width: 20px;
+    height: 20px;
+    margin: 0px 5px;
+}
+
+/* caixa div após clicar em REMOVER dados */
+
+.deletarTelaDados {
+    padding-top:10px;
+    padding-right:0px;
+    padding-bottom:30px;
+    padding-left:0px;
+    width: 23vw;
+    text-align: center;
+    background-color: rgb(178,194, 183);
+    position: absolute;
+    top: 150px;
+    left: 530px;
+    display:none;
+    font-family: 'Nunito',sans-serif;
+}
+.deletarTelaDados hr {
+   margin-bottom:100px;
+}
+/* estilizando a barra de pesquisa */
+
+#btnPesquisa {
+    width: 50px;
+    border: rgb(138, 138, 138) solid;
+    background-color:rgb(202, 207, 211);
+}
+.render-pesquisa {
+    width: 270px;
+    position: absolute;
+    right: 125px;
+    top: 170px;
+    display: none;
+}
+
+.render-pesquisa ul {
+    margin: 0 auto;
+
+}
+
+.render-pesquisa ul li {
+    list-style-type: none;
+    border: 1px solid #000;
+    margin-right: 15px;
+}
+/*itens da lista de produtos na pesquisa*/
+.item-pesquisa{
+background-color:rgb(202, 207, 211);
+cursor: pointer;
+transition: background .4s; 
+}
+.item-pesquisa:hover{
+background-color: aquamarine;
+    }
+
+.data {
+    height: 50vh;
+    border: 1px solid black;
+
+}
